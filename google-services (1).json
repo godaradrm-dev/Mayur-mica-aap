@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "674705949343",
+    "project_id": "mayur-mica",
+    "storage_bucket": "mayur-mica.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:674705949343:android:030ea66be40eb5b2aa98aa",
+        "android_client_info": {
+          "package_name": "com.mayurmica.wholesale"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRHaEY8VlleiC8c2LxabXiW1sOeYwqbBE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
