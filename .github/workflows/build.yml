@@ -1,4 +1,4 @@
-name: Build Mayur Mica App
+name: Build Android App
 
 on:
   push:
@@ -10,22 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Flutter
-        uses: subosito/flutter-action@v3
+      - name: Set up JDK
+        uses: actions/setup-java@v4
         with:
-          flutter-version: '3.24.3'
+          java-version: '17'
+          distribution: 'temurin'
 
-      - name: Install dependencies
-        run: flutter pub get
-
-      - name: Build release APK
-        run: flutter build apk --release
-
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: MayurMica-APK
-          path: build/app/outputs/flutter-apk/app-release.apk
+      - name: Build with Gradle
+        run: ./gradlew assembleDebug
